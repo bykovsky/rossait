@@ -1,0 +1,87 @@
+@import "_variables.scss";
+
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: $black;
+  font-family: 'Roboto', sans-serif;
+  color: $white;
+}
+
+.container {
+  max-width: 1566px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0,0,0,0);
+  overflow: hidden;
+}
+
+/*ELEMENTS*/
+.button{
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 233px;
+  padding: 21px 40px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  background-color: transparent;
+  font-size: 16px;
+  text-transform: none;
+  text-decoration:none;
+  letter-spacing: 1px;
+  line-height: 1;
+  transition: border-color $transition-delay $transition-func, color $transition-delay $transition-func, background-color $transition-delay $transition-func;
+
+  &-primary {
+    border-color: $grey-border;
+    color: $white;
+
+    &:hover {
+      border-color: $primary;
+      color: $white;
+    }
+  }
+}
+@media (max-width: 1555.98px) {
+  .container{
+    max-width: 100%;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .container{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media (max-width: 991.98px) {
+  .button{
+    min-width: auto;
+    padding: 15px 15px;
+  }
+}
+@media (max-width: 767.98px) {
+  .container{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (max-width: 575.98px) {
+  .container{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+
